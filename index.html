@@ -3,10 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="_javascript/script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      emailjs.init("D-fIgT1r5_Qxq7KME");
+    </script>
+    <title>index.html</title>
   </head>
+
   <body>
-    <h1>J & M Sublimation</h1>
-    <p>Work in progress come back later</p>
+    <header>
+      <button type="home" onclick="linkHome()" class="btn btn1">Home</button>
+    </header>
+    <div class="container">
+      <h1>J & M Sublimation</h1>
+      <h2>What are we about?</h2>
+      <div class="photoText">
+        <img src="images/large/pricelist.jpg" alt="Photos of prices." />
+        <p>
+          We are a family oriented business. We thrive to provide quality made
+          products at afordable prices. We understand that people may want a
+          photograph made into something special, which is why our shop is the
+          place to go. We can take any image and put it on any product. We also
+          offer personalization at no charge. Thank you for coming to our
+          website and we hope you can find something you like.
+        </p>
+      </div>
+      <br />
+
+      <div class="image-container">
+        <a href="hat.html"
+          ><img src="images/large/hat.jpg" alt="link to hat photos"
+        /></a>
+        <a href="mug.html"
+          ><img src="images/large/mug.jpg" alt="link to mug photos"
+        /></a>
+        <a href="shirt.html"
+          ><img src="images/large/shirt.jpg" alt="link to shirt photos"
+        /></a>
+        <a href="tumbler.html"
+          ><img src="images/large/tumbler.jpeg" alt="link to tumbler photos"
+        /></a>
+        <a href="other.html"
+          ><img src="images/large/other.jpg" alt="link to other photos"
+        /></a>
+      </div>
+      <br />
+      <div class="placeOrder">
+        <label>
+          Would you like to place an order? <br />
+          <input
+            type="radio"
+            name="orderForm"
+            id="order"
+            value="yes"
+            onclick="hideShowDiv(1)"
+          />Yes<br />
+          <input
+            type="radio"
+            name="orderForm"
+            id="order"
+            value="no"
+            onclick="hideShowDiv(2)"
+          />No<br />
+        </label>
+        <br />
+
+        <div id="hideShow">
+          <form name="form1" id="form1" action="" method="post">
+            <label
+              >First Name:
+              <input type="text" id="fName" name="first" />
+            </label>
+            <br />
+            <br />
+
+            <label
+              >Last Name:
+              <input type="text" id="lName" name="last" />
+            </label>
+            <br />
+            <br />
+
+            <label
+              >Phone:
+              <input type="text" id="phone" name="phone" />
+            </label>
+            <br />
+            <br />
+
+            <label
+              >Email:
+              <input type="text" id="email" name="email" />
+            </label>
+            <br />
+            <br />
+
+            <label
+              >What are you interested in: <br />
+              <br />
+              <input type="checkbox" id="Shirt" name="shirt" value="shirt" />
+              <label for="shirt"> Shirt </label><br />
+              <input type="checkbox" id="Hat" name="hat" value="hat" />
+              <label for="hat"> Hat </label><br />
+              <input
+                type="checkbox"
+                id="Tumbler"
+                name="tumbler"
+                value="tumbler"
+              />
+              <label for="tumbler"> Tumbler</label><br />
+              <input type="checkbox" id="Mug" name="mug" value="mug" />
+              <label for="mug"> Mug </label><br />
+              <input type="checkbox" id="Other" name="other" value="other" />
+              <label for="other"> Other </label><br />
+              <br />
+            </label>
+
+            <input type="button" value="Submit" onclick="validateForm()" />
+          </form>
+          <div id="more"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h2>Contact us at 865-420-1031</h2>
+    </footer>
   </body>
 </html>
